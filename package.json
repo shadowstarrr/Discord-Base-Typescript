@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "@types/node": "^22.15.29",
+    "chalk": "^5.4.1",
+    "discord.js": "^14.19.3",
+    "glob": "^11.0.2",
+    "util": "^0.12.5"
+  },
+  "name": "base",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "i": "bun install",
+    "dev": "bun ./src/main.ts",
+    "start": "bun run ./dist/src/main.js"
+  },
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "imports": {
+      "#utils": ["./dist/structures/utils/index.js"],
+      "#types": ["./dist/structures/types/index.js"],
+      "#functions": ["./dist/functions/index.js"],
+      "#main": ["./dist/structures/index.js"]
+  }
+}
