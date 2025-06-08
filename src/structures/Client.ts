@@ -64,7 +64,7 @@ export class ExtendedClient extends Client {
         }
       }
 
-      if (Array(settings.bot?.guilds).length > 0) {
+      if (settings.bot.guilds && settings.bot?.guilds.length > 0) {
         for (
           let index = 0;
           index < Array(settings?.bot?.guilds).length;
